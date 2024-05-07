@@ -5,8 +5,8 @@ let diametro = 15;
 let raio = diametro / 2;
 
 //Variaveis da velocidade da bolinha
-let velocidadeXBolinha = 6;
-let velocidadeYBolinha = 6;
+let velocidadeXBolinha = 1;
+let velocidadeYBolinha = 1;
 
 //Variaveis da raquete
 let xRaquete = 5;
@@ -57,7 +57,6 @@ function draw() {
   colisaoRaquete(xRaqueteOponente, yRaqueteOponente);
   incluiPlacar();
   marcaPonto();
-  bolinhaNaoFicaPresa()
 }
 
 function mostraBolinha(){
@@ -159,14 +158,5 @@ function marcaPonto(){
   if (xBolinha < 10){
     pontosDoOponente += 1
     ponto.play();
-  }
-}
-
-function bolinhaNaoFicaPresa(){
-    if (xBolinha - raio < 0){
-    xBolinha = 23
-    }
-  if (xBolinha + raio > 600){
-    xBolinha = 5
   }
 }
